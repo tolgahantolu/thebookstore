@@ -1,0 +1,15 @@
+{
+  "name": "the-bookstore",
+  "version": "1.0.0",
+  "description": "The Bookstore E-Commerce Theme By Tolgahan Tolu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecommerce",
+    "bookstore"
+  ],
+  "author": "Tolgahan Tolu",
+  "license": "ISC"
+}
