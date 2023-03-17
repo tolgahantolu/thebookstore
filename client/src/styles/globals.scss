@@ -11,3 +11,14 @@
     @apply text-base text-theme-black bg-theme-background capitalize font-poppins font-normal w-full h-full;
   }
 }
+
+$theme-black: #1c1d1c;
+$theme-white: #fffffe;
+$theme-orange: #f25042;
+$theme-background: #fafaf9;
+$theme-dark-brown: #716040;
+$theme-light-brown: #85662e;
+
+.active {
+  color: $theme-white;
+}
