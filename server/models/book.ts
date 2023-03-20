@@ -16,6 +16,11 @@ const bookSchema = new Schema(
       required: true,
       trim: true,
     },
+    author: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     price: {
       type: Number,
       required: true,
