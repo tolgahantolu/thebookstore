@@ -33,6 +33,16 @@ const bookSchema = new Schema(
       type: Array,
       required: false,
     },
+    bestSeller: {
+      type: Boolean,
+      required: true,
+      trim: true,
+      default: false,
+    },
+    date: {
+      type: Date,
+      default: new Date(),
+    },
   },
   { collection: 'books' },
 );
