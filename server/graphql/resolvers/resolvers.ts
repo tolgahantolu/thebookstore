@@ -1,17 +1,17 @@
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-];
+import bookSchema from '../../models/book';
 
 const resolvers = {
   Query: {
-    books: () => books,
+    getBooks: async () => {
+      try {
+        const allBooks = await bookSchema.find();
+        console.log(typeof allBooks);
+        return allBooks;
+      } catch (error) {
+        //throw new Error(error.message);
+        console.log(error.message);
+      }
+    },
   },
 };
 
