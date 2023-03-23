@@ -4,15 +4,14 @@ const typeDefs = `#graphql
     title: String!
     genre: String!
 	desc: String!
-	author:String
-	price: Number!
+	author: String
+	price: Int!
 	images: [String]!
-	additionalInfo: {String}!
+	additionalInfo: [String]!
 	reviews: [String]
 	bestSeller: Boolean
-
   }
-  
+
   type Query {
     getBooks: [Book]
   }

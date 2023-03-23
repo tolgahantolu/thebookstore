@@ -11,6 +11,6 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noEmit": true,
-    "allowImportingTsExtensions": true
+    "noEmitHelpers": false
   }
 }

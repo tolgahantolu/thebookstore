@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && nodemon dist/index.js"
+    "compile:ts": "tsc",
+    "compile:babel": "babel src --extensions .ts --out-dir dist",
+    "start": "npm run compile:ts && npm run compile:babel && nodemon ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,12 @@
     "nodemon": "^2.0.21"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-syntax-top-level-await": "^7.14.5",
+    "@babel/plugin-transform-typescript": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
     "@types/node": "^18.15.3",
     "typescript": "^5.0.2"
   }
