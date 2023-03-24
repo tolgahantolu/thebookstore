@@ -14,6 +14,9 @@ module.exports = {
         'theme-dark-brown': '#716040',
         'theme-light-brown': '#85662e',
       },
+      backgroundImage: {
+        'header-pattern-1': "url('/library-1.png')",
+      },
       screens: {
         xxs: '320px',
         xs: '640px',
