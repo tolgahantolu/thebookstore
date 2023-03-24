@@ -6,6 +6,8 @@ const typeDefs = `#graphql
 	desc: String!
 	author: String
 	price: Int!
+	discountPrice: Int!
+	featuredImage: String
 	images: [String]!
 	additionalInfo: [String]!
 	reviews: [String]

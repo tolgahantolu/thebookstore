@@ -26,6 +26,15 @@ const bookSchema = new Schema(
       required: true,
       trim: true,
     },
+    discountPrice: {
+      type: Number,
+      trim: true,
+    },
+    featuredImage: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     images: {
       type: Array,
       required: true,
