@@ -1,3 +1,17 @@
 {
-  "extends": ["@atolye15/eslint-config", "@atolye15/eslint-config-base-typescript"]
+  "extends": ["@atolye15/eslint-config", "@atolye15/eslint-config-base-typescript"],
+  "plugins": ["jest"],
+  "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "warn",
+    "jest/no-identical-title": "warn",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "warn",
+    "jest/no-deprecated-functions": "warn"
+  },
+  "settings": {
+    "jest": {
+      "version": 29
+    }
+  }
 }
