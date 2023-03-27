@@ -7,7 +7,7 @@
     "compile:ts": "tsc",
     "compile:babel": "babel src --extensions .ts --out-dir dist",
     "start": "npm run compile:ts && npm run compile:babel && nodemon ./dist/index.js",
-    "build": "cd .. && npm install && cd server/ && npm install && npm run compile:babel && cd ../client && npm install && npm run build",
+    "build": "cd .. && npm install && cd server/ && npm install && npm run compile:babel",
     "server": "node dist/index.js"
   },
   "keywords": [],
