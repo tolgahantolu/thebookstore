@@ -1,3 +1,5 @@
 {
-  "extends": ["@atolye15/eslint-config"]
+  "extends": ["@atolye15/eslint-config"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"]
 }

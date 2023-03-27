@@ -24,6 +24,8 @@
   "devDependencies": {
     "@atolye15/eslint-config": "^1.2.0",
     "@atolye15/stylelint-config": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^7.32.0",
     "postcss-sass": "^0.5.0",
     "prettier": "^2.8.4",
