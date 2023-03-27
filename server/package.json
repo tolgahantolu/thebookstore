@@ -6,7 +6,9 @@
   "scripts": {
     "compile:ts": "tsc",
     "compile:babel": "babel src --extensions .ts --out-dir dist",
-    "start": "npm run compile:ts && npm run compile:babel && nodemon ./dist/index.js"
+    "start": "npm run compile:ts && npm run compile:babel && nodemon ./dist/index.js",
+    "build": "npm install && cd ../client && npm install && npm run build",
+    "server": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
