@@ -11,9 +11,7 @@
     "lint": "npm run lint:ts && npm run lint:css",
     "format:ts": "prettier --write **/src/**/*.{ts,tsx} && npm run lint:eslint --fix",
     "format:css": "stylelint --fix --custom-syntax postcss-sass scss **/src/**/*.scss",
-    "format": "npm run format:ts && npm run format:css",
-    "build": "npm install && cd server && npm install && npm run compile:babel && cd ../client && npm install && npm run build",
-    "server": "node ./server/dist/index.js"
+    "format": "npm run format:ts && npm run format:css"
   },
   "keywords": [
     "ecommerce",
@@ -23,17 +21,12 @@
   "license": "ISC",
   "devDependencies": {
     "@atolye15/eslint-config": "^1.2.0",
-    "@atolye15/eslint-config-base-typescript": "^1.2.0",
     "@atolye15/stylelint-config": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-jest": "^27.2.1",
     "postcss-sass": "^0.5.0",
     "prettier": "^2.8.4",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.5",
-    "stylelint-prettier": "^3.0.0",
-    "typescript": "^3.9.10"
+    "stylelint-prettier": "^3.0.0"
   }
 }
