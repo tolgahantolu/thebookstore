@@ -11,7 +11,9 @@
     "lint": "npm run lint:ts && npm run lint:css",
     "format:ts": "prettier --write **/src/**/*.{ts,tsx} && npm run lint:eslint --fix",
     "format:css": "stylelint --fix --custom-syntax postcss-sass scss **/src/**/*.scss",
-    "format": "npm run format:ts && npm run format:css"
+    "format": "npm run format:ts && npm run format:css",
+    "build": "npm install && cd server && npm install && npm run compile:babel && cd ../client && npm install && npm run build",
+    "server": "node ./server/dist/index.js"
   },
   "keywords": [
     "ecommerce",
