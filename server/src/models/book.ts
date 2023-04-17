@@ -26,6 +26,10 @@ const bookSchema = new Schema(
       required: true,
       trim: true,
     },
+    discount: {
+      type: Boolean,
+      trim: true,
+    },
     discountPrice: {
       type: Number,
       trim: true,

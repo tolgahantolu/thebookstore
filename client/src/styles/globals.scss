@@ -49,3 +49,45 @@ $theme-light-brown: #85662e;
     transform: translateY(0);
   }
 }
+
+// custom slider button
+.swiper:hover {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+  background-color: $theme-black !important;
+  color: $theme-white !important;
+  height: 3rem !important;
+  width: 3rem !important;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+  &::after {
+    font-size: 1.5rem !important;
+  }
+}
+
+// hide arrows from number input
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

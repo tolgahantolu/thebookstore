@@ -6,6 +6,7 @@ const typeDefs = `#graphql
 	desc: String!
 	author: String
 	price: Int!
+	discount: Boolean!
 	discountPrice: Int!
 	featuredImage: String
 	images: [String]!

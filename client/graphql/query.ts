@@ -7,6 +7,10 @@ export const GET_BOOKS = gql`
       title
       genre
       price
+      bestSeller
+      featuredImage
+      discount
+      discountPrice
     }
   }
 `;

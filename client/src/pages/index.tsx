@@ -1,8 +1,24 @@
-import Header from '@/components/Header/Header';
-import Navbar from '@/components/Navbar/Navbar';
+import React from 'react';
 import Head from 'next/head';
+import { GetServerSideProps, NextPage } from 'next';
+import { Navbar, Header, BestSeller } from '@/components';
+import { apolloClient } from '../../graphql/client';
+import { GET_BOOKS } from '../../graphql/query';
+import { IBook } from '../../typescript';
 
-export default function Home() {
+export const getServerSideProps: GetServerSideProps = async () => {
+  const client = apolloClient();
+
+  const { data } = await client.query({ query: GET_BOOKS });
+
+  return {
+    props: {
+      books: data,
+    },
+  };
+};
+
+export const Home: NextPage<{ books: { getBooks: IBook[] } }> = ({ books: { getBooks } }) => {
   return (
     <>
       <Head>
@@ -17,6 +33,9 @@ export default function Home() {
 
       <Navbar />
       <Header />
+      <BestSeller books={getBooks} />
     </>
   );
-}
+};
+
+export default Home;

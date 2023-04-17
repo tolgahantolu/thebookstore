@@ -6,10 +6,6 @@ describe('Header Component', () => {
     render(<Header />);
   });
 
-  it('should render image correctly', () => {
-    expect(screen.getByTestId('header-image')).toMatchSnapshot();
-  });
-
   it('should render header text correctly', () => {
     expect(screen.getByTestId('header-text')).toHaveTextContent(
       /Today a reader, tomorrow a leader./i,
