@@ -1,7 +1,7 @@
 import React from 'react';
 import SwiperCore, { Autoplay, Grid, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Book } from '../../components';
+import { Book, SectionHeader } from '@/components';
 import { IBook } from '../../../typescript';
 import 'swiper/css';
 import 'swiper/css/grid';
@@ -14,10 +14,12 @@ const BestSeller: React.FunctionComponent<{ books: IBook[] }> = ({ books }) => {
 
   return (
     <div className="mt-10 px-4 xs:px-12 sm:20 md:px-[100px]">
-      <h1 data-testid="best-seller-title" className="text-3xl sm:text-4xl font-medium">
-        bestsellers
-      </h1>
-      <p className="text-base sm:text-lg font-thin">top selling books of {year}</p>
+      <SectionHeader
+        dataTestID="best-seller-title"
+        title="bestsellers"
+        subTitle="top selling books of"
+        additionalInfo={year}
+      />
 
       <Swiper
         className="mt-6"

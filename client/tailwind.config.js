@@ -14,6 +14,7 @@ module.exports = {
         'theme-background': '#fafaf9',
         'theme-dark-brown': '#716040',
         'theme-light-brown': '#85662e',
+        'theme-gray': '#838282',
       },
       backgroundImage: {
         'header-pattern-1': "url('/library-1.png')",

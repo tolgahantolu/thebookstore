@@ -30,7 +30,6 @@ export const Home: NextPage<{ books: { getBooks: IBook[] } }> = ({ books: { getB
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/logo.png" />
       </Head>
-
       <Navbar />
       <Header />
       <BestSeller books={getBooks} />
