@@ -1,24 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps, NextPage } from 'next';
-import { Navbar, Header, BestSeller } from '@/components';
+import { Navbar, Header, BestSeller, AuthorOTM } from '@/components';
 import { apolloClient } from '../../graphql/client';
-import { GET_BOOKS } from '../../graphql/query';
-import { IBook } from '../../typescript';
+import { GET_AUTHORS, GET_BOOKS } from '../../graphql/query';
+import { IAuthor, IBook } from '../../typescript';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const client = apolloClient();
 
-  const { data } = await client.query({ query: GET_BOOKS });
+  const { data: books } = await client.query({ query: GET_BOOKS });
+  const { data: authors } = await client.query({ query: GET_AUTHORS });
 
   return {
     props: {
-      books: data,
+      books,
+      authors,
     },
   };
 };
 
-export const Home: NextPage<{ books: { getBooks: IBook[] } }> = ({ books: { getBooks } }) => {
+//prettier-ignore
+export const Home: NextPage<{ books: { getBooks: IBook[] }, authors: {getAuthors: IAuthor[]}}> = ({
+  books: { getBooks },
+  authors: {getAuthors},
+}) => {
+  
   return (
     <>
       <Head>
@@ -33,6 +40,7 @@ export const Home: NextPage<{ books: { getBooks: IBook[] } }> = ({ books: { getB
       <Navbar />
       <Header />
       <BestSeller books={getBooks} />
+      <AuthorOTM authors={getAuthors} />
     </>
   );
 };

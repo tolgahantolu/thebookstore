@@ -1,4 +1,5 @@
 import bookSchema from '../../models/book';
+import authorSchema from '../../models/author';
 
 const resolvers = {
   Query: {
@@ -11,26 +12,17 @@ const resolvers = {
         console.log(error.message);
       }
     },
+
+    getAuthors: async (): Promise<any> => {
+      try {
+        const allAuthors = await authorSchema.find();
+        return allAuthors;
+      } catch (error) {
+        //throw new Error(error.message);
+        console.log(error.message);
+      }
+    },
   },
 };
 
 export default resolvers;
-
-//const books = [
-//  {
-//    title: 'The Awakening',
-//    author: 'Kate Chopin',
-//  },
-//  {
-//    title: 'City of Glass',
-//    author: 'Paul Auster',
-//  },
-//];
-//
-//const resolvers = {
-//  Query: {
-//    books: () => books,
-//  },
-//};
-//
-//export default resolvers;

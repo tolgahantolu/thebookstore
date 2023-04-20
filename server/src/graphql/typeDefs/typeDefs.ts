@@ -15,8 +15,20 @@ const typeDefs = `#graphql
 	bestSeller: Boolean
   }
 
+  type Author {
+	id: ID!
+	image: String!
+	name: String!
+	surname: String!
+	novelPrize: Int
+	bio: String!
+	books: [Book]
+	authorOTM: Boolean
+  }
+
   type Query {
     getBooks: [Book]
+	getAuthors: [Author]
   }
 `;
 

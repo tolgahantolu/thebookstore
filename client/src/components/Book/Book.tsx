@@ -6,7 +6,6 @@ import { BookForm } from '../../components';
 
 //const Book: React.FunctionComponent<{ book: IBook }> = (book) => {
 const Book: React.FunctionComponent<IBook> = (bookDetails) => {
-  console.log(bookDetails);
   return (
     <div className="group relative overflow-hidden flex justify-center col-span-1 row-span-1 bg-white pt-1 px-2 pb-3 rounded-xl">
       <Link href={`book/${bookDetails.title}`}>

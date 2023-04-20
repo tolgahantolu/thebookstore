@@ -12,6 +12,11 @@ const authorSchema = new Schema(
       required: true,
       trim: true,
     },
+    surname: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     novelPrize: {
       type: Number,
       required: true,
@@ -26,6 +31,9 @@ const authorSchema = new Schema(
     books: {
       type: Array,
       required: true,
+    },
+    authorOTM: {
+      type: Boolean,
     },
     date: {
       type: Date,
