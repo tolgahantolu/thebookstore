@@ -20,8 +20,8 @@ export const apolloClient = () => {
     link: from([
       errorLink,
       new HttpLink({
-        //uri: process.env.APOLLO_SERVER,
-        uri: 'http://localhost:4000/',
+        uri: process.env.APOLLO_SERVER,
+        //uri: 'http://localhost:4000/',
       }),
     ]),
     cache: new InMemoryCache(),
