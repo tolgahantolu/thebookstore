@@ -5,7 +5,7 @@ import { Book, SectionHeader } from '@/components';
 
 const AuthorOTM: React.FunctionComponent<{ authors: IAuthor[] }> = ({ authors }) => {
   return (
-    <div className="mt-20 px-4 xs:px-12 sm:20 md:px-[100px]">
+    <div className="mt-20 px-4 xs:px-12 sm:px-20 md:px-[100px]">
       <SectionHeader
         dataTestID="authorOtmTitle"
         title="author of the month"
