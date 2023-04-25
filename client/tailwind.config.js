@@ -18,6 +18,9 @@ module.exports = {
       },
       backgroundImage: {
         'header-pattern-1': "url('/library-1.png')",
+        bookshelf: "url('/bookshelf-jaymantri-pixabay.jpg')",
+        booktable: "url('/booktable-stocksnap-pixabay.jpg')",
+        kindle: "url('/kindle-stocksnap-pixabay.jpg')",
       },
       screens: {
         xxs: '320px',

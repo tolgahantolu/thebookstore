@@ -1,7 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps, NextPage } from 'next';
-import { Navbar, Header, BestSeller, AuthorOTM, Shipping } from '@/components';
+import {
+  Navbar,
+  Header,
+  BestSeller,
+  AuthorOTM,
+  Shipping,
+  LibraryFurnishingEbook,
+} from '@/components';
 import { apolloClient } from '../../graphql/client';
 import { GET_AUTHORS, GET_BOOKS } from '../../graphql/query';
 import { IAuthor, IBook } from '../../typescript';
@@ -42,6 +49,7 @@ export const Home: NextPage<{ books: { getBooks: IBook[] }, authors: {getAuthors
       <BestSeller books={getBooks} />
       <AuthorOTM authors={getAuthors} />
 	  <Shipping />
+	  <LibraryFurnishingEbook />
     </>
   );
 };
