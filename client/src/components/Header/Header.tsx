@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   return (
     <div
       data-testid="header-image"
-      className="mt-10 relative w-full h-[440px] bg-header-pattern-1 bg-center"
+      className="mt-10 relative w-full h-[440px] bg-header-pattern-1 bg-center bg-no-repeat"
     >
       <div
         data-testid="header-text"

@@ -7,7 +7,7 @@ const LibraryFurnishingEbook = () => {
       <div className="grid grid-rows-3 grid-cols-1 sm:grid-rows-1 min-[900px]:grid-cols-3 gap-5 uppercase">
         <Link
           href="/"
-          className="col-span-1 row-span-1 min-h-[150px] grid place-items-center gap-1 py-4 text-theme-white bg-bookshelf"
+          className="col-span-1 row-span-1 min-h-[150px] grid place-items-center gap-1 py-4 text-theme-white bg-bookshelf bg-no-repeat"
         >
           <h1 data-testid="library" className="text-3xl font-medium">
             library
@@ -17,7 +17,7 @@ const LibraryFurnishingEbook = () => {
         </Link>
         <Link
           href="/"
-          className="col-span-1 row-span-1 grid place-items-center gap-1 py-4 text-theme-white bg-booktable"
+          className="col-span-1 row-span-1 grid place-items-center gap-1 py-4 text-theme-white bg-booktable bg-no-repeat"
         >
           <h1 data-testid="furnishing" className="text-3xl font-medium">
             furnishing
@@ -27,7 +27,7 @@ const LibraryFurnishingEbook = () => {
         </Link>
         <Link
           href="/"
-          className="col-span-1 row-span-1 grid place-items-center gap-1 py-4 text-theme-white bg-kindle"
+          className="col-span-1 row-span-1 grid place-items-center gap-1 py-4 text-theme-white bg-kindle bg-no-repeat"
         >
           <h1 data-testid="ebooks" className="text-3xl font-medium">
             ebooks
