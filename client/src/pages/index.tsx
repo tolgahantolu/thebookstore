@@ -9,6 +9,7 @@ import {
   Shipping,
   LibraryFurnishingEbook,
   Testimonials,
+  Footer,
 } from '@/components';
 import { apolloClient } from '../../graphql/client';
 import { GET_AUTHORS, GET_BOOKS, GET_TESTIMONIALS } from '../../graphql/query';
@@ -54,6 +55,7 @@ export const Home: NextPage<{
       <Shipping />
       <LibraryFurnishingEbook />
       <Testimonials testimonials={getTestimonials} />
+	  <Footer />
     </>
   );
 };
