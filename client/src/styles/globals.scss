@@ -79,6 +79,10 @@ $theme-light-brown: #85662e;
   }
 }
 
+.swiper-pagination-bullets {
+  bottom: -5px !important;
+}
+
 .swiper-pagination-bullet {
   background-color: $theme-light-brown !important;
 }
