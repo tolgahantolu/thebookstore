@@ -8,31 +8,34 @@ import {
   AuthorOTM,
   Shipping,
   LibraryFurnishingEbook,
+  Testimonials,
 } from '@/components';
 import { apolloClient } from '../../graphql/client';
-import { GET_AUTHORS, GET_BOOKS } from '../../graphql/query';
-import { IAuthor, IBook } from '../../typescript';
+import { GET_AUTHORS, GET_BOOKS, GET_TESTIMONIALS } from '../../graphql/query';
+import { IAuthor, IBook, ITestimonials } from '../../typescript';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const client = apolloClient();
 
   const { data: books } = await client.query({ query: GET_BOOKS });
   const { data: authors } = await client.query({ query: GET_AUTHORS });
+  const { data: testimonials } = await client.query({ query: GET_TESTIMONIALS });
 
   return {
     props: {
       books,
       authors,
+      testimonials,
     },
   };
 };
 
 //prettier-ignore
-export const Home: NextPage<{ books: { getBooks: IBook[] }, authors: {getAuthors: IAuthor[]}}> = ({
-  books: { getBooks },
-  authors: {getAuthors},
-}) => {
-  
+export const Home: NextPage<{
+  books: { getBooks: IBook[] };
+  authors: { getAuthors: IAuthor[] };
+  testimonials: { getTestimonials: ITestimonials[] };
+}> = ({ books: { getBooks }, authors: { getAuthors }, testimonials: { getTestimonials } }) => {
   return (
     <>
       <Head>
@@ -48,8 +51,9 @@ export const Home: NextPage<{ books: { getBooks: IBook[] }, authors: {getAuthors
       <Header />
       <BestSeller books={getBooks} />
       <AuthorOTM authors={getAuthors} />
-	  <Shipping />
-	  <LibraryFurnishingEbook />
+      <Shipping />
+      <LibraryFurnishingEbook />
+      <Testimonials testimonials={getTestimonials} />
     </>
   );
 };

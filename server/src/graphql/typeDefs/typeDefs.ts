@@ -25,10 +25,18 @@ const typeDefs = `#graphql
 	books: [Book]
 	authorOTM: Boolean
   }
+ 
+  type Testimonial {
+	id: ID!
+	customerImage: String!
+	customerName: String!
+	customerComment: String!
+  }
 
   type Query {
     getBooks: [Book]
 	getAuthors: [Author]
+	getTestimonials: [Testimonial]
   }
 `;
 

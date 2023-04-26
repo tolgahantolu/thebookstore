@@ -8,7 +8,6 @@ import 'swiper/css/grid';
 import 'swiper/css/navigation';
 
 const BestSeller: React.FunctionComponent<{ books: IBook[] }> = ({ books }) => {
-  console.log(books);
   const year = new Date().getFullYear();
   SwiperCore.use([Autoplay, Grid, Navigation]);
 

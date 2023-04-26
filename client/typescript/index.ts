@@ -19,3 +19,10 @@ export interface IAuthor {
   authorOTM: boolean;
   books: IBook[];
 }
+
+export interface ITestimonials {
+  id: string;
+  customerName: string;
+  customerComment: string;
+  customerImage: string;
+}

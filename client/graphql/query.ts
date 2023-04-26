@@ -39,3 +39,14 @@ export const GET_AUTHORS = gql`
     }
   }
 `;
+
+export const GET_TESTIMONIALS = gql`
+  query GetTestimonials {
+    getTestimonials {
+      id
+      customerName
+      customerComment
+      customerImage
+    }
+  }
+`;

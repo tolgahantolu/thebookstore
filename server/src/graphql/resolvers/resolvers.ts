@@ -1,5 +1,6 @@
 import bookSchema from '../../models/book';
 import authorSchema from '../../models/author';
+import testimonialSchema from '../../models/testimonials';
 
 const resolvers = {
   Query: {
@@ -17,6 +18,16 @@ const resolvers = {
       try {
         const allAuthors = await authorSchema.find();
         return allAuthors;
+      } catch (error) {
+        //throw new Error(error.message);
+        console.log(error.message);
+      }
+    },
+
+    getTestimonials: async (): Promise<any> => {
+      try {
+        const allTestimonials = await testimonialSchema.find();
+        return allTestimonials;
       } catch (error) {
         //throw new Error(error.message);
         console.log(error.message);

@@ -7,3 +7,4 @@ export { default as SectionHeader } from '@/components/SectionHeader/SectionHead
 export { default as AuthorOTM } from '@/components/AuthorOTM/AuthorOTM';
 export { default as Shipping } from '@/components/Shipping/Shipping';
 export { default as LibraryFurnishingEbook } from '@/components/LibraryFurnishingEbook/LibraryFurnishingEbook';
+export { default as Testimonials } from '@/components/Testimonials/Testimonials';
