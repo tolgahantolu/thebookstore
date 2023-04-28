@@ -12,7 +12,7 @@ const BestSeller: React.FunctionComponent<{ books: IBook[] }> = ({ books }) => {
   SwiperCore.use([Autoplay, Grid, Navigation]);
 
   return (
-    <div className="mt-10 px-4 xs:px-12 sm:20 md:px-[100px]">
+    <div className="mt-10 px-4 xs:px-12 sm:px-20 md:px-[100px]">
       <SectionHeader
         dataTestID="best-seller-title"
         title="bestsellers"

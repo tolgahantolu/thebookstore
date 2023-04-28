@@ -1,3 +1,4 @@
+export { default as Layout } from '@/components/Layout';
 export { default as Navbar } from '@/components/Navbar/Navbar';
 export { default as Header } from '@/components/Header/Header';
 export { default as BestSeller } from '@/components/BestSeller/BestSeller';
