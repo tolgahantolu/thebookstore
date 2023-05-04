@@ -2,14 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps, NextPage } from 'next';
 import {
-  Navbar,
   Header,
   BestSeller,
   AuthorOTM,
   Shipping,
   LibraryFurnishingEbook,
   Testimonials,
-  Footer,
 } from '@/components';
 import { apolloClient } from '../../graphql/client';
 import { GET_AUTHORS, GET_BOOKS, GET_TESTIMONIALS } from '../../graphql/query';
@@ -55,7 +53,7 @@ export const Home: NextPage<{
       <Shipping />
       <LibraryFurnishingEbook />
       <Testimonials testimonials={getTestimonials} />
-	  <Footer />
+
     </>
   );
 };
